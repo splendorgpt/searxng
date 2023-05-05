@@ -20,11 +20,15 @@ A redis DB connect can be tested by::
 """
 
 import os
-import pwd
 import logging
 import redis
 from searx import get_setting
+import platform
 
+if platform.system() == "Linux" or platform.system() == "Darwin":
+    import pwd
+else:
+    print("El módulo 'pwd' no está disponible en este sistema operativo.")
 
 OLD_REDIS_URL_DEFAULT_URL = 'unix:///usr/local/searxng-redis/run/redis.sock?db=0'
 """This was the default Redis URL in settings.yml."""

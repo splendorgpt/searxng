@@ -7,7 +7,7 @@ general:
   privacypolicy_url: false
   # use true to use your own donation page written in searx/info/en/donate.md
   # use false to disable the donation link
-  donation_url: https://docs.searxng.org/donate.html
+  donation_url: false # https://docs.searxng.org/donate.html
   # mailto:contact@example.com
   contact_url: false
   # record stats
@@ -78,7 +78,7 @@ server:
   # If your instance owns a /etc/searxng/settings.yml file, then set the following
   # values there.
 
-  secret_key: "ultrasecretkey"  # Is overwritten by ${SEARXNG_SECRET}
+  secret_key: "superultrasecretkey"  # Is overwritten by ${SEARXNG_SECRET}
   # Proxying image results through searx
   image_proxy: false
   # 1.0 and 1.1 are supported
@@ -100,7 +100,7 @@ redis:
 
 ui:
   # Custom static path - leave it blank if you didn't change
-  static_path: ""
+  static_path: "../static"
   static_use_hash: false
   # Custom templates path - leave it blank if you didn't change
   templates_path: ""
@@ -122,7 +122,7 @@ ui:
   # results_on_new_tab: false
   theme_args:
     # style of simple theme: auto, light, dark
-    simple_style: auto
+    simple_style: dark
 
 # Lock arbitrary settings on the preferences page.  To find the ID of the user
 # setting you want to lock, check the ID of the form on the page "preferences".
