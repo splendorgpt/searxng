@@ -71,10 +71,10 @@
     {% block content %}
     {% endblock %}
 </main>
-<footer>
+<!---<footer>
     <p>{{ _('Powered by') }} <a href="{{ url_for('info', pagename='about') }}">Splendor</a> - {{ searx_version }}
         — {{ _('a privacy-respecting, open metasearch engine') }}</p>
-</footer>
+</footer>-->
 <!--[if gte IE 9]>-->
 <script src="{{ url_for('static', filename='js/searxng.min.js') }}"></script>
 <!--<![endif]-->
