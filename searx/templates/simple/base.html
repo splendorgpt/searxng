@@ -20,6 +20,8 @@
     {% else %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/searxng.min.css') }}" type="text/css"
               media="screen"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.min.css') }}" type="text/css"
+              media="screen"/>
     {% endif %}
     {% block styles %}{% endblock %}
     <!--[if gte IE 9]>-->
@@ -77,6 +79,60 @@
 </footer>-->
 <!--[if gte IE 9]>-->
 <script src="{{ url_for('static', filename='js/searxng.min.js') }}"></script>
+<script>
+
+    const messagesDiv = document.getElementById('messages');
+    const input = document.getElementById('input');
+    const sendButton = document.getElementById('send-button');
+    const toggleSearchButton = document.getElementById('toggle-search');
+    const searchContainer = document.getElementById('search-container');
+
+    function createMessageElement(text, className) {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', className);
+        messageDiv.textContent = text;
+        return messageDiv;
+    }
+
+    sendButton.addEventListener('click', () => {
+        const message = input.value.trim();
+        if (message) {
+            const userMessage = createMessageElement(message, 'user');
+            messagesDiv.appendChild(userMessage);
+
+            // Aquí puedes enviar el mensaje al back-end para procesarlo con ChatGPT.
+
+            input.value = '';
+        }
+    });
+
+    input.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            sendButton.click();
+        }
+    });
+
+
+    // Ejemplo de cómo agregar un mensaje del asistente
+    function addAssistantMessage(text) {
+        const assistantMessage = createMessageElement(text, 'assistant');
+        messagesDiv.appendChild(assistantMessage);
+    }
+
+    // Agregar una respuesta del asistente (esto es solo un ejemplo, reemplazar con la respuesta real de ChatGPT)
+    addAssistantMessage('Hola, soy SplendorGPT ¿En qué puedo ayudarte hoy?');
+
+    toggleSearchButton.addEventListener('click', () => {
+        if (searchContainer.style.display === 'none') {
+            searchContainer.style.display = 'block';
+        } else {
+            searchContainer.style.display = 'none';
+        }
+    });
+</script>
+
+
+
 <!--<![endif]-->
 </body>
 </html>
