@@ -1,0 +1,99 @@
+        #main-container {
+            margin-top:  1rem;
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        #chat-container {
+            width: 100%;
+            background-color: #292b2e;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        #header {
+            background-color: #757575;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        #messages {
+            padding: 20px;
+            overflow-y: auto;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .message {
+            max-width: 70%;
+            padding: 8px 16px;
+            margin-bottom: 8px;
+            border-radius: 16px;
+        }
+        .user {
+            background-color: #007bff;
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 0;
+        }
+        .assistant {
+            background-color: #e0e0e0;
+            color: #333;
+            align-self: flex-start;
+            border-bottom-left-radius: 0;
+        }
+        #input-container {
+            display: flex;
+            border-top: 1px solid #e0e0e0;
+        }
+        #input {
+            flex-grow: 1;
+            border: none;
+            padding: 12px 20px;
+            outline: none;
+        }
+        #send-button {
+            background-color: #21212d;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+        }
+        #search-container {
+            width: 50%;
+            display: none;
+            height: 80%;
+        }
+        #search-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        #toggle-search {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+           #model-selector {
+
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-color: #0000;
+            background-color: #292b2e;
+            appearance: none;
+            cursor: pointer;
+        }
