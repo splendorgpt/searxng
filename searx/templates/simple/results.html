@@ -59,15 +59,15 @@
         </div>
         {% endif %}
 
-        {% if infoboxes %}
+     <!--      {% if infoboxes %}
         <div id="infoboxes">
             {% for infobox in infoboxes -%}
             {% include 'simple/infobox.html' %}
             {%- endfor %}
         </div>
-        {% endif %}
+        {% endif %}-->
 
-        {% if not suggestions %}
+  <!--      {% if not suggestions %}
 
         <div id="suggestions" role="complementary" aria-labelledby="suggestions-title">
             <h4 class="title" id="suggestions-title">{{ _('Suggestions') }}: </h4>
@@ -89,7 +89,7 @@
                 {% endfor %}
             </div>
         </div>
-        {% endif %}
+        {% endif %}-->
 
         {% if not method == 'POST' %}
         <div id="search_url" role="complementary" aria-labelledby="search_url-title">
@@ -99,17 +99,26 @@
             </div>
         </div>
         {% endif %}
+
         <div id="main-container" role="complementary" >
             <div id="chat-container">
 
                 <div id="messages">
-                    <!-- Los mensajes del chat se mostrarán aquí -->
+                  <div id="response"></div>   <!-- Los mensajes del chat se mostrarán aquí -->
                 </div>
 
                 <div id="input-container">
+                <select id="model-selector">
+    <option value="text-davinci-002">davinci</option>
+    <option value="text-curie-002">curie</option>
+    <option value="text-babbage-002">babbage</option>
+    <option value="text-ada-002">ada</option>
+</select>
+                    <form id="gpt-form">
+    <input type="text" id="inputPrompt" required>
+    <button id="btn-generate" type="button">Generar</button>
+  </form>
 
-                    <input type="text" id="input" placeholder="Escribe tu mensaje...">
-                    <button id="send-button">Enviar</button>
                 </div>
             </div>
         </div>

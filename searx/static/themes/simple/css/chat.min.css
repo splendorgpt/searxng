@@ -52,13 +52,13 @@
             display: flex;
             border-top: 1px solid #e0e0e0;
         }
-        #input {
+        #inputPrompt {
             flex-grow: 1;
             border: none;
             padding: 12px 20px;
             outline: none;
         }
-        #send-button {
+        #btn-generate {
             background-color: #21212d;
             color: white;
             border: none;
@@ -97,3 +97,7 @@
             appearance: none;
             cursor: pointer;
         }
+        #response {
+      color: white;
+        }
+

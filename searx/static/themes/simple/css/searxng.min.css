@@ -3746,3 +3746,12 @@ article[data-vim-selected].category-videos {
 pre code {
   white-space: pre-wrap;
 } /*# sourceMappingURL=searxng.min.css.map */
+a.custom-link {
+            color: white;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            padding: 10px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+

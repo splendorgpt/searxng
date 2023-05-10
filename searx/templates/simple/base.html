@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html
     class="no-js theme-{{ preferences.get_value('simple_style') or 'auto' }} center-aligment-{{ preferences.get_value('center_alignment') and 'yes' or 'no' }}"
-    lang="{{ locale_rfc5646 }}" {% if rtl %} dir="rtl"{% endif %}>
+    lang="{{ locale_rfc5646 }}" {% if rtl %} dir="rtl" {% endif %}>
 <head>
     <meta charset="UTF-8"/>
     <meta name="description" content="SearXNG — a privacy-respecting, open metasearch engine">
@@ -15,13 +15,13 @@
     <title>{% block title %}{% endblock %}{{ instance_name }}</title>
     {% block meta %}{% endblock %}
     {% if rtl %}
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/searxng-rtl.min.css') }}" type="text/css"
-              media="screen"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/searxng-rtl.min.css') }}" type="text/css"
+          media="screen"/>
     {% else %}
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/searxng.min.css') }}" type="text/css"
-              media="screen"/>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.min.css') }}" type="text/css"
-              media="screen"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/searxng.min.css') }}" type="text/css"
+          media="screen"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.min.css') }}" type="text/css"
+          media="screen"/>
     {% endif %}
     {% block styles %}{% endblock %}
     <!--[if gte IE 9]>-->
@@ -29,49 +29,50 @@
             client_settings="{{ client_settings }}"></script>
     <!--<![endif]-->
     {% block head %}
-        <link title="{{ instance_name }}" type="application/opensearchdescription+xml" rel="search"
-              href="{{ opensearch_url }}"/>
+    <link title="{{ instance_name }}" type="application/opensearchdescription+xml" rel="search"
+          href="{{ opensearch_url }}"/>
     {% endblock %}
     <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}" sizes="any">
     <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
 </head>
 <body class="{{ endpoint }}_endpoint">
-<main id="main_{{ self._TemplateReference__context.name|replace("simple/", "")|replace(".html", "") }}"
-      class="{{ body_class }}">
-    {% if errors %}
-        <div class="dialog-error" role="alert">
-            <a href="#" class="close" aria-label="close" title="close">×</a>
-            <ul>
-                {% for message in errors %}
-                    <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-    {% endif %}
+<main id="main_{{ self._TemplateReference__context.name|replace(" simple
+/", "")|replace(".html", "") }}"
+class="{{ body_class }}">
+{% if errors %}
+<div class="dialog-error" role="alert">
+    <a href="#" class="close" aria-label="close" title="close">×</a>
+    <ul>
+        {% for message in errors %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
 
-    <!--
-    <nav id="links_on_top">
-        {%- from 'simple/icons.html' import icon_big -%}
-        {%- block linkto_about -%}
-            <a href="{{ url_for('info', pagename='about') }}"
-               class="link_on_top_about">{{ icon_big('information-circle-outline') }}<span>{{ _('About') }}</span></a>
-        {%- endblock -%}
-        {%- block linkto_donate -%}
-            {%- if donation_url -%}
-                <a href="{{ donation_url }}"
-                   class="link_on_top_donate">{{ icon_big('heart-outline') }}<span>{{ _('Donate') }}</span></a>
-            {%- endif -%}
-        {%- endblock -%}
-        {%- block linkto_preferences -%}
-            <a href="{{ url_for('preferences') }}"
-               class="link_on_top_preferences">{{ icon_big('menu-outline') }}<span>{{ _('Preferences') }}</span></a>
-        {%- endblock -%}
-    </nav>
-    -->
-    {% block header %}
-    {% endblock %}
-    {% block content %}
-    {% endblock %}
+<!--
+<nav id="links_on_top">
+    {%- from 'simple/icons.html' import icon_big -%}
+    {%- block linkto_about -%}
+        <a href="{{ url_for('info', pagename='about') }}"
+           class="link_on_top_about">{{ icon_big('information-circle-outline') }}<span>{{ _('About') }}</span></a>
+    {%- endblock -%}
+    {%- block linkto_donate -%}
+        {%- if donation_url -%}
+            <a href="{{ donation_url }}"
+               class="link_on_top_donate">{{ icon_big('heart-outline') }}<span>{{ _('Donate') }}</span></a>
+        {%- endif -%}
+    {%- endblock -%}
+    {%- block linkto_preferences -%}
+        <a href="{{ url_for('preferences') }}"
+           class="link_on_top_preferences">{{ icon_big('menu-outline') }}<span>{{ _('Preferences') }}</span></a>
+    {%- endblock -%}
+</nav>
+-->
+{% block header %}
+{% endblock %}
+{% block content %}
+{% endblock %}
 </main>
 <!---<footer>
     <p>{{ _('Powered by') }} <a href="{{ url_for('info', pagename='about') }}">Splendor</a> - {{ searx_version }}
@@ -79,59 +80,59 @@
 </footer>-->
 <!--[if gte IE 9]>-->
 <script src="{{ url_for('static', filename='js/searxng.min.js') }}"></script>
-<script>
 
-    const messagesDiv = document.getElementById('messages');
-    const input = document.getElementById('input');
-    const sendButton = document.getElementById('send-button');
-    const toggleSearchButton = document.getElementById('toggle-search');
-    const searchContainer = document.getElementById('search-container');
+  <script>
+    const API_KEY = "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";
 
-    function createMessageElement(text, className) {
-        const messageDiv = document.createElement('div');
-        messageDiv.classList.add('message', className);
-        messageDiv.textContent = text;
-        return messageDiv;
-    }
+    async function generateText(prompt) {
+      const url = "https://api.openai.com/v1/engines/text-davinci-003/completions";
 
-    sendButton.addEventListener('click', () => {
-        const message = input.value.trim();
-        if (message) {
-            const userMessage = createMessageElement(message, 'user');
-            messagesDiv.appendChild(userMessage);
+      const headers = {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${API_KEY}`,
+      };
 
-            // Aquí puedes enviar el mensaje al back-end para procesarlo con ChatGPT.
+      const data = {
+        prompt: prompt,
+        max_tokens: 100,
+        n: 1,
+        stop: null,
+        temperature: 1.0,
+      };
 
-            input.value = '';
-        }
-    });
+      try {
+        const response = await fetch(url, {
+          method: "POST",
+          headers: headers,
+          body: JSON.stringify(data),
+        });
 
-    input.addEventListener('keypress', (event) => {
-        if (event.key === 'Enter') {
-            sendButton.click();
-        }
-    });
-
-
-    // Ejemplo de cómo agregar un mensaje del asistente
-    function addAssistantMessage(text) {
-        const assistantMessage = createMessageElement(text, 'assistant');
-        messagesDiv.appendChild(assistantMessage);
-    }
-
-    // Agregar una respuesta del asistente (esto es solo un ejemplo, reemplazar con la respuesta real de ChatGPT)
-    addAssistantMessage('Hola, soy SplendorGPT ¿En qué puedo ayudarte hoy?');
-
-    toggleSearchButton.addEventListener('click', () => {
-        if (searchContainer.style.display === 'none') {
-            searchContainer.style.display = 'block';
+        if (response.ok) {
+          const responseData = await response.json();
+          const generatedText = responseData.choices[0].text;
+          return generatedText.trim();
         } else {
-            searchContainer.style.display = 'none';
+          throw new Error(`${response.status} ${response.statusText}`);
         }
+      } catch (error) {
+        console.error(`Error: ${error.message}`);
+      }
+    }
+
+    const btnGenerate = document.getElementById('btn-generate');
+
+    btnGenerate.addEventListener('click', async () => {
+      const inputPrompt = document.getElementById("inputPrompt").value;
+      const responseElement = document.getElementById("response");
+
+      try {
+        const generatedText = await generateText(inputPrompt);
+        responseElement.textContent = generatedText;
+      } catch (error) {
+        responseElement.textContent = `Error: ${error.message}`;
+      }
     });
-</script>
-
-
+  </script>
 
 <!--<![endif]-->
 </body>
