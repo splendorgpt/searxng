@@ -59,7 +59,7 @@
         </div>
         {% endif %}
 
-        {% if infoboxes %}
+       <!--        {% if infoboxes %}
         <div id="infoboxes">
             {% for infobox in infoboxes -%}
             {% include 'simple/infobox.html' %}
@@ -67,7 +67,7 @@
         </div>
         {% endif %}
 
-        {% if not suggestions %}
+ {% if not suggestions %}
 
         <div id="suggestions" role="complementary" aria-labelledby="suggestions-title">
             <h4 class="title" id="suggestions-title">{{ _('Suggestions') }}: </h4>
@@ -98,7 +98,7 @@
                 <pre>{{ url_for('search', _external=True) }}?q={{ q|urlencode }}&amp;language={{ current_language }}&amp;time_range={{ time_range }}&amp;safesearch={{ safesearch }}{% if pageno > 1 %}&amp;pageno={{ pageno }}{% endif %}{% if selected_categories %}&amp;categories={{ selected_categories|join(",") | replace(' ','+') }}{% endif %}{% if timeout_limit %}&amp;timeout_limit={{ timeout_limit|urlencode }}{% endif %}</pre>
             </div>
         </div>
-        {% endif %}
+        {% endif %}-->
         <div id="main-container" role="complementary" >
             <div id="chat-container">
 
@@ -106,14 +106,10 @@
                     <!-- Los mensajes del chat se mostrarán aquí -->
                 </div>
 
-                <div id="input-container">
 
-                    <input type="text" id="input" placeholder="Escribe tu mensaje...">
-                    <button id="send-button">Enviar</button>
-                </div>
             </div>
         </div>
-        <div id="apis" role="complementary" aria-labelledby="apis-title">
+         <div id="apis" role="complementary" aria-labelledby="apis-title">
             {% if search_formats %}
             <h4 class="title" id="apis-title">{{ _('Download results') }}</h4>
             {% for output_type in search_formats %}
@@ -248,4 +244,12 @@
     </nav>
     {% endif %}
 </div>
+  <div class="footer">
+     <div id="input-container">
+
+                    <input type="text" id="input" placeholder="Escribe tu mensaje...">
+                    <button id="send-button">Enviar</button>
+                </div>
+  </div>
+
 {% endblock %}
