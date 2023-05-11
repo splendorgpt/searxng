@@ -20,7 +20,7 @@
 {% endif %}
 
 <div id="results" class="{{ only_template }}">
-    {% if answers -%}
+   <!-- {% if answers -%}
     <div id="answers" role="complementary" aria-labelledby="answers-title"><h4 class="title" id="answers-title">{{
         _('Answers') }} : </h4>
         {%- for answer in answers.values() -%}
@@ -34,7 +34,7 @@
         </div>
         {%- endfor -%}
     </div>
-    {%- endif %}
+    {%- endif %}-->
 
     <div id="sidebar">
 
@@ -246,9 +246,9 @@
 </div>
   <div class="footer">
      <div id="input-container">
+                    <input type="text" id="input" placeholder="Write message...">
 
-                    <input type="text" id="input" placeholder="Escribe tu mensaje...">
-                    <button id="send-button">Enviar</button>
+                    <button id="send-button">Send</button>
                 </div>
   </div>
 
