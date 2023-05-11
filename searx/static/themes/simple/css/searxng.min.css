@@ -2521,13 +2521,13 @@ table.engine-error th.engine-error-type {
 #search_logo {
   grid-area: logo;
   display: flex;
+  margin-bot: -10px;
   align-items: center;
   justify-content: center;
 }
 #search_logo svg {
   flex: 1;
-  width: 30px;
-  height: 30px;
+  width: 70px;
   margin: 0.5rem 0 auto 0;
 }
 .search_categories {

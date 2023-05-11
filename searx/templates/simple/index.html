@@ -1,9 +1,204 @@
 {% extends "simple/base.html" %}
 {% from 'simple/icons.html' import icon_big %}
 {% block content %}
-<div class="index">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/landing.min.css') }}" type="text/css">
+<div style="height: 80vh;" class="index">
     <div class="title"><h1>Splendos</h1></div>
 
     {% include 'simple/simple_search.html' %}
 </div>
+ <main class="main">
+    <section class="about container">
+
+      <article class="about__item">
+        <figure class="about__picture">
+          <img src="{{ url_for('static', filename='images/icon-any-file.svg') }}"  class="about__img">
+        </figure>
+
+        <h3 class="about__title"> Protección de privacidad</h3>
+
+        <p class="about__paragraph"> Garantizamos la eliminación de tu dirección IP de nuestros servidores globales para una conexión cifrada.</p>
+      </article>
+
+      <article class="about__item">
+        <figure class="about__picture">
+          <img src="{{ url_for('static', filename='images/icon-security.svg') }}" class="about__img">
+        </figure>
+
+        <h3 class="about__title">  Seguridad de datos
+        </h3>
+
+        <p class="about__paragraph"> Evitamos que terceros accedan a tus datos personales y redireccionen anuncios hacia ti.
+        </p>
+      </article>
+
+
+
+
+      <article class="about__item">
+        <figure class="about__picture">
+          <img src="{{ url_for('static', filename='images/icon-collaboration.svg') }}"  class="about__img">
+        </figure>
+
+        <h3 class="about__title">Navegación anónima</h3>
+
+        <p class="about__paragraph">
+         Utiliza nuestro proxy "Vista anónima" para proteger tu identidad mientras exploras otros sitios web.</p>
+      </article>
+
+      <article class="about__item">
+        <figure class="about__picture">
+          <img src="{{ url_for('static', filename='images/icon-any-file.svg') }}"  class="about__img">
+        </figure>
+
+        <h3 class="about__title">SplendorGpt:</h3>
+
+        <p class="about__paragraph">  Disfruta de la inteligencia artificial en un chat para responder a cualquier cosa que necesites.</p>
+      </article>
+
+    </section>
+
+    <section class="productive container">
+
+      <figure class="productive__picture">
+        <img src="{{ url_for('static', filename='images/illustration-stay-productive.png') }}" class="productive__img">
+      </figure>
+
+      <div class="productive__texts">
+
+        <h3 class="productive__title"> Splendos</h3>
+
+        <p class="productive__paragraph"> Podras utilizar Splendos, sabiendo que no tendran guardada la información de tu busqueda.</p>
+
+        <p class="productive__paragraph">Splendos ofrece la oportunidad de utilizar el SplendorGpt para responder todas sus preguntas.</p>
+
+        <a href="#" class="productive__cta">
+          Más información...
+          <img src="{{ url_for('static', filename='images/icon-arrow.svg') }}" class="productive__arrow">
+        </a>
+
+      </div>
+    </section>
+
+    <section class="card container">
+
+      <article class="card__item card__item--first">
+        <p class="card__paragraph"> Aca se puede pensar si poner comentarios de personas 3, o los fundadores de la empresa</p>
+
+        <div class="card__profile">
+          <figure class="card__picture">
+            <img src="{{ url_for('static', filename='images/profile-1.jpg') }}"  class="card__img">
+          </figure>
+
+          <div class="card__info">
+            <h3 class="card__name">Todor Ivanov</h3>
+            <p class="card__job">Founder & CEO</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card__item ">
+        <p class="card__paragraph"> Aca se puede pensar si poner comentarios de personas 3, o los fundadores de la empresa</p>
+
+        <div class="card__profile">
+          <figure class="card__picture">
+            <img src="{{ url_for('static', filename='images/profile-2.jpg') }}"   class="card__img">
+          </figure>
+
+          <div class="card__info">
+            <h3 class="card__name">Todor</h3>
+            <p class="card__job">Founder & CE</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card__item ">
+        <p class="card__paragraph"> Aca se puede pensar si poner comentarios de personas 3, o los fundadores de la empresa</p>
+
+        <div class="card__profile">
+          <figure class="card__picture">
+            <img src="{{ url_for('static', filename='images/profile-3.jpg') }}"    class="card__img">
+          </figure>
+
+          <div class="card__info">
+            <h3 class="card__name">Todor</h3>
+            <p class="card__job">Founder & CEO</p>
+          </div>
+        </div>
+      </article>
+
+
+    </section>
+
+    <section class="join">
+      <div class="join__container container">
+        <h3 class="join__title">  Get early access today
+        </h3>
+        <p class="join__paragraph"> Welcome to Splendos here can you get information of this platform.</p>
+
+        <form class="join__form">
+          <input type="text" placeholder="contact@splendos.org" class="join__input join__input--text">
+          <input type="submit" value="Register" class="join__input join__input--submit">
+        </form>
+      </div>
+    </section>
+  </main>
+
+ <!-- <footer class="footer ">
+    <section class="footer__container container">
+      <img src="images/logo.svg" class="footer__logo">
+
+      <div class="footer__items">
+        <p class="footer__contact footer__contact--first">
+          <img src="images/icon-location.svg" class="footer__icon">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quidem aperiam quibusdam, veritatis explicabo similique.
+        </p>
+
+
+        <div class="footer__content">
+
+          <p class="footer__contact footer__contact--second">
+            <img src="images/icon-phone.svg" class="footer__icon">
+            +1-543-123-4567
+          </p>
+
+          <div class="footer__location">
+            <p class="footer__contact">
+              <img src="images/icon-email.svg" class="footer__icon">
+              example@fylo.com
+            </p>
+          </div>
+
+        </div>
+
+        <nav class="footer__nav">
+          <a href="#" class="footer__link">About Us</a>
+          <a href="#" class="footer__link">Jobs</a>
+          <a href="#" class="footer__link">Press</a>
+          <a href="#" class="footer__link">Blog</a>
+        </nav>
+
+        <nav class="footer__nav">
+          <a href="#" class="footer__link">Contact Us</a>
+          <a href="#" class="footer__link">Terms</a>
+          <a href="#" class="footer__link">Privacy</a>
+        </nav>
+
+        <div class="footer__social">
+          <a href="#" class="footer__media"><img src="images/fb.svg" class="footer__img"></a>
+          <a href="#" class="footer__media"><img src="images/twitter.svg" class="footer__img"></a>
+          <a href="#" class="footer__media footer__media--last"><img src="images/instagram.svg" class="footer__img"></a>
+        </div>
+      </div>
+
+    </section>
+
+
+  </footer>
+
+-->
+
+
+
 {% endblock %}
