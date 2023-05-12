@@ -7,14 +7,14 @@
     box-sizing: border-box;
 }
 
-:root {
-    --blue-intro: hsl(217, 28%, 15%);
+.main {
+    --blue-intro: hsl(218, 28%, 13%);
     --blue-main: hsl(218, 28%, 13%);
-    --blue-footer: hsl(216, 53%, 9%);
-    --blue-testimonials: hsl(219, 30%, 18%);
+    --blue-footer: hsl(218, 28%, 13%);
+    --blue-testimonials: hsl(218, 28%, 13%);
     --white: hsl(0, 0%, 100%);
-    --cyan-gradient: hsl(176, 68%, 64%);
-    --blue-gradient: hsl(198, 60%, 50%);
+    --cyan-gradient: hsl(218, 28%, 13%);
+    --blue-gradient: hsl(218, 28%, 13%);
     --light-red: hsl(0, 100%, 63%);
     --gradient: linear-gradient(to right, var(--cyan-gradient), var(--blue-gradient));
     --body-font: 'Open Sans', sans-serif;
