@@ -153,7 +153,9 @@ body{
     margin-bottom: 1em;
     font-family: var(--heading-font);
 }
-
+.about__paragraph{
+    text-align: justify;
+}
 .productive{
     color: #fff;
     display: grid;
@@ -175,6 +177,7 @@ body{
 .productive__paragraph{
     line-height: 1.7;
     margin-bottom: 1em;
+    text-align: justify;
 }
 
 
@@ -433,3 +436,4 @@ body{
         margin-right: 0;
     }
 }
+
