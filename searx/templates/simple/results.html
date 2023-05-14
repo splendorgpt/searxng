@@ -14,7 +14,9 @@
       href="{{ url_for('search', _external=True) }}?q={{ q|urlencode }}&amp;categories={{ selected_categories|join("
       ,") | replace(' ','+') }}&amp;pageno={{ pageno }}&amp;time_range={{ time_range }}&amp;language={{ current_language }}&amp;safesearch={{ safesearch }}&amp;format=rss">{% endblock %}
 {% block content %}
-
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://overpass-api.de https://ai-connector.splendos.org/api/v1/chat">
+</head>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
 
 {% include 'simple/search.html' %}
