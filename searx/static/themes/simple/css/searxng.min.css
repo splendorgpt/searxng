@@ -3261,7 +3261,7 @@ article[data-vim-selected].category-videos {
 }
 #urls {
 border-left: 2px solid white;
-   height: 73vh; /* Define una altura fija para el componente */
+   height: 65vh; /* Define una altura fija para el componente */
   overflow-y: scroll;
   padding: 0;
   grid-area: urls;
