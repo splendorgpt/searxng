@@ -1504,6 +1504,7 @@ article.result-images .detail {
   .detail
   .result-images-labels
   p.result-content {
+
   height: 2rem;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3259,8 +3260,12 @@ article[data-vim-selected].category-videos {
   margin-top: 0;
 }
 #urls {
+border-left: 2px solid white;
+   height: 73vh; /* Define una altura fija para el componente */
+  overflow-y: scroll;
   padding: 0;
   grid-area: urls;
+
 }
 #suggestions .wrapper {
   display: flex;
@@ -3747,49 +3752,15 @@ pre code {
   white-space: pre-wrap;
 } /*# sourceMappingURL=searxng.min.css.map */
 .footer {
+  display: flex;
+  justify-content: flex-start;
       width: 100%;
       background-color: #333;
       padding: 20px;
       position: fixed;
       bottom: 0;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      align-items: left;
     }
 
-    .input-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
 
-    input[type="text"] {
-      width: 70%;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      outline: none;
-    }
-
-    button[type="submit"] {
-      margin-left: 10px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      background-color: #4CAF50;
-      color: white;
-      cursor: pointer;
-    }
-    #aasa {
-  display: inline-block;
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-    }
-
-    button[type="submit"]:hover {
-      background-color: #45a049;
-    }

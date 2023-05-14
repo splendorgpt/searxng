@@ -1,169 +1,105 @@
-        #main-container {
-            margin-top:  1rem;
-            width: 100%;
-            height: 80vh;
-            display: flex;
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow-y: auto;
-        }
-        @media screen and (min-width: 768px) {
-          #main-container {
-            position: fixed;
-             margin-top:  1rem;
-            width: 50%;
-            height: 80vh;;
-            display: flex;
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow-y: auto;
-          }
-           }
-        #chat-container {
-            width: 100%;
-            background-color: #222428;
-            border-right: 1px solid white;
-            display: flex;
-            flex-direction: column;
-            overflow-y: auto;
-        }
-        #header {
-            background-color: #757575;
-            color: white;
-            padding: 12px 20px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        #messages {
-            padding: 20px;
-            overflow-y: auto;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .message {
-            max-width: 70%;
-            padding: 8px 16px;
-            margin-bottom: 8px;
-            border-radius: 16px;
-        }
-        .user {
-            background-color: #007bff;
-            color: white;
-            align-self: flex-end;
-            border-bottom-right-radius: 0;
-        }
-        .assistant {
-            background-color: #e0e0e0;
-            color: #333;
-            align-self: flex-start;
-            border-bottom-left-radius: 0;
-        }
-        #input-container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin-top: 20px;
-          margin-bottom: 20px;
-        }
-        #inputPrompt {
-            flex-grow: 1;
-            border: none;
-            padding: 12px 20px;
-            outline: none;
-        }
-        #input-container {
-        position: relative;
-          display: flex;
-          flex-direction: row;
-          width: 40%;
-          align-items: center;
-          margin-top: 10px;
-          margin-bottom: 10px;
-        }
-        .input-icon {
+    #main-container {
+      margin-top: 1rem;
+      width: 100%;
+      height: 73vh;
+      display: flex;
+      background-color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
 
+    #chat-container {
+      width: 100%;
+      background-color: #222428;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    #messages {
+      overflow-y: auto;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .message {
+      width: 100%;
+
+    }
+
+    .user {
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        line-height: 1.2;
+          background-color: #444654; /* Elige el color de fondo que prefieras */
+      color: white;
+      align-self: flex-start; /* Cambia 'flex-end' a 'flex-start' */
+      border-bottom-right-radius: 0;
+      text-align: justify; /* Alinea el texto a la derecha */
+       padding: 20px 30px;
+    }
+
+    .assistant {
+    box-sizing: border-box;
+    padding: 20px 30px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.2;
+      background-color: #343541;
+      color: white;
+      align-self: flex-start;
+      border-bottom-left-radius: 0;
+      text-align: justify;
+    }
+#input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 56%;
+  margin: 20px auto 20px 20px; /* modificado aquí */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-        #imagenperre {
-        width:50px;
-        background-repeat: no-repeat;
-  background-size: cover;
-  background-color: none;
+#inputPrompt {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
 
-        }
+#btn-generate {
+  background-color: #21212d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
 
-        #input {
-          flex: 1;
-          position: relative;
-          width: 100%;
-          max-width: 500px;
-          padding: 12px;
-          border: 2px solid #ccc;
-          border-radius: 208px;
-          font-size: 18px;
-          outline: none;
+#btn-generate:hover {
+  background-color: #444654;
+}
 
 
 
-
-        #input:focus {
-          border-color: #007bff;
-          box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3);
-        }
-
-        #send-button {
-
-        }
-
-        #send-button:hover {
-          background-color: #0056b3;
-        }
-
-        #btn-generate {
-            background-color: #21212d;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            cursor: pointer;
-        }
-
-        #search-container {
-            width: 50%;
-            display: none;
-            height: 80%;
-        }
-        #search-iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        #toggle-search {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: #4caf50;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            cursor: pointer;
-            z-index: 1000;
-        }
-           #model-selector {
-
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            font-color: #0000;
-            background-color: #292b2e;
-            appearance: none;
-            cursor: pointer;
-        }
-        #response {
-      color: white;
-        }
-
+    #model-selector {
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-color: #0000;
+      background-color: #292b2e;
+      appearance: none;
+      cursor: pointer;
+    }
