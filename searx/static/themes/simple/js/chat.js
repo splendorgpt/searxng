@@ -82,23 +82,7 @@ btnGenerate.addEventListener('click', async () => {
       // ...
 
       // Añadir el evento de clic al botón de copia
-      copyButton.addEventListener('click', () => {
-        const clipboard = new ClipboardJS(copyButton, {
-          text: function(trigger) {
-            return line;
-          }
-        });
 
-        clipboard.on('success', function(e) {
-          console.log('Copied!');
-          e.clearSelection();
-        });
-
-        clipboard.on('error', function(e) {
-          console.error('Action:', e.action);
-          console.error('Trigger:', e.trigger);
-        });
-      });
       } else {
         modifiedText += `${line}<br>`;
       }
