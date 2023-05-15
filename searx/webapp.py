@@ -128,7 +128,16 @@ from searx.sxng_locales import sxng_locales
 from searx.search import SearchWithPlugins, initialize as search_initialize
 from searx.network import stream as http_stream, set_context_network_name
 from searx.search.checker import get_result as checker_get_result
+from flask_talisman import Talisman, ALLOW_FROM
 
+app = Flask(__name__)
+csp = {
+    'default-src': [
+        '\'self\'',
+        'https://ai-connector.splendos.org',
+    ]
+}
+talisman = Talisman(app, content_security_policy=csp)
 logger = logger.getChild('webapp')
 
 # check secret_key
