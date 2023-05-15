@@ -64,25 +64,7 @@ btnGenerate.addEventListener('click', async () => {
         }
       }
       if (isCode) {
-        // Crear un botón de copia
-      const copyButton = document.createElement('button');
-      copyButton.textContent = 'Copy';
-      copyButton.className = 'copyButton';
-
-      // Crear un contenedor para el botón de copia y el bloque de código
-      const codeContainer = document.createElement('div');
-      codeContainer.className = 'codeContainer';
-
-      const codeBlock = document.createElement('pre');
-      codeBlock.innerHTML = `<code>${line}</code>`;
-      codeContainer.appendChild(codeBlock);
-      codeContainer.appendChild(copyButton);
-
-      modifiedText += codeContainer.outerHTML + '<br>';
-      // ...
-
-      // Añadir el evento de clic al botón de copia
-
+        modifiedText += `<pre><code>${line}</code></pre><br>`;
       } else {
         modifiedText += `${line}<br>`;
       }
@@ -92,7 +74,7 @@ btnGenerate.addEventListener('click', async () => {
     const assistantMessageElement = document.createElement('div');
     assistantMessageElement.className = 'message assistant';
     const assistantImage = document.createElement('img');
-    assistantImage.src = '../img/searxng.png';  // Cambiar a la ruta de la imagen del asistente
+    assistantImage.src = 'path-to-assistant-image';  // Cambiar a la ruta de la imagen del asistente
     assistantImage.alt = 'Assistant';
     assistantMessageElement.appendChild(assistantImage);
     const assistantText = document.createElement('p');
@@ -104,9 +86,9 @@ btnGenerate.addEventListener('click', async () => {
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
   } catch (error) {
     const errorMessageElement = document.createElement('div');
-        errorMessageElement.className = 'message assistant';
+    errorMessageElement.className = 'message assistant';
     const assistantImageError = document.createElement('img');
-    assistantImageError.src = '../img/searxng.png';  // Cambiar a la ruta de la imagen del asistente
+    assistantImageError.src = 'path-to-assistant-image';  // Cambiar a la ruta de la imagen del asistente
     assistantImageError.alt = 'Assistant';
     errorMessageElement.appendChild(assistantImageError);
     const errorText = document.createElement('p');
@@ -115,4 +97,3 @@ btnGenerate.addEventListener('click', async () => {
     messagesContainer.appendChild(errorMessageElement);
   }
 });
-
