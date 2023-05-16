@@ -2523,8 +2523,6 @@ table.engine-error th.engine-error-type {
   grid-area: logo;
   display: flex;
   margin-bot: -10px;
-  align-items: center;
-  justify-content: center;
 }
 #search_logo svg {
   flex: 1;
