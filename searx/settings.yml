@@ -287,9 +287,10 @@ categories_as_tabs:
   map:
   music:
   it:
-  science:
-  files:
-  social media:
+  chat:
+ # science:
+ # files:
+ # social media:
 
 engines:
   - name: 9gag

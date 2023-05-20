@@ -28,9 +28,10 @@ CATEGORIES_AS_TABS = {
     'map': {},
     'music': {},
     'it': {},
-    'science': {},
-    'files': {},
-    'social media': {},
+    'chat': {},
+   # 'science': {},
+   # 'files': {},
+   # 'social media': {},
 }
 STR_TO_BOOL = {
     '0': False,
