@@ -8,6 +8,7 @@
 }
 
 .main {
+    margin-top: -100px;
     --blue-intro: hsl(218, 28%, 13%);
     --blue-main: hsl(218, 28%, 13%);
     --blue-footer: hsl(218, 28%, 13%);
@@ -160,6 +161,8 @@ body{
     color: #fff;
     display: grid;
     gap: 3em;
+    justify-items: center; /* Centrar elementos hijos horizontalmente */
+    align-items: center; /* Centrar elementos hijos verticalmente */
 }
 
 .productive__img{
@@ -172,6 +175,7 @@ body{
 .productive__title{
     font-family: var(--heading-font);
     margin-bottom: .7em;
+    text-align: center; /* Centrar texto horizontalmente */
 }
 
 .productive__paragraph{
