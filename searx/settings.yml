@@ -85,7 +85,7 @@ server:
   http_protocol_version: "1.0"
   # POST queries are more secure as they don't show up in history but may cause
   # problems when using Firefox containers
-  method: "POST"
+  method: "GET"
   default_http_headers:
     X-Content-Type-Options: nosniff
     X-XSS-Protection: 1; mode=block
