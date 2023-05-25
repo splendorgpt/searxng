@@ -171,8 +171,8 @@ outgoing:
         - address: 'socks5h://localhost:9050'
         - address: 'socks5h://localhost:9050'
   proxies:
-    http: socks5h://127.0.0.1:9050
-    https: socks5h://127.0.0.1:9050
+    http: socks5h://localhost:9050
+    https: socks5h://localhost:9050
   enable_http2: true
   # uncomment below section if you want to use a custom server certificate
   # see https://www.python-httpx.org/advanced/#changing-the-verification-defaults
