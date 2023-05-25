@@ -170,9 +170,7 @@ outgoing:
       https:
         - address: 'socks5h://tor:9050'
         - address: 'socks5h://tor:9050'
-  proxies:
-    http: socks5h://tor:9050
-    https: socks5h://tor:9050
+
   enable_http2: true
   # uncomment below section if you want to use a custom server certificate
   # see https://www.python-httpx.org/advanced/#changing-the-verification-defaults
