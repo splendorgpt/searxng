@@ -162,6 +162,17 @@ outgoing:
   # point.
   pool_maxsize: 20
   # See https://www.python-httpx.org/http2/
+  pools:
+    default:
+      http:
+        - address: 'socks5h://localhost:9050'
+        - address: 'socks5h://localhost:9050'
+      https:
+        - address: 'socks5h://localhost:9050'
+        - address: 'socks5h://localhost:9050'
+  proxies:
+    http: socks5h://127.0.0.1:9050
+    https: socks5h://127.0.0.1:9050
   enable_http2: true
   # uncomment below section if you want to use a custom server certificate
   # see https://www.python-httpx.org/advanced/#changing-the-verification-defaults
@@ -178,7 +189,7 @@ outgoing:
   #      - http://proxy1:8080
   #      - http://proxy2:8080
   #
-  #  using_tor_proxy: true
+  using_tor_proxy: true
   #
   # Extra seconds to add in order to account for the time taken by the proxy
   #
@@ -2013,3 +2024,4 @@ doi_resolvers:
   sci-hub.ru: 'https://sci-hub.ru/'
 
 default_doi_resolver: 'oadoi.org'
+
