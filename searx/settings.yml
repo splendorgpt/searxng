@@ -189,7 +189,7 @@ outgoing:
   #      - http://proxy1:8080
   #      - http://proxy2:8080
   #
-  using_tor_proxy: true
+  # using_tor_proxy: true
   #
   # Extra seconds to add in order to account for the time taken by the proxy
   #
