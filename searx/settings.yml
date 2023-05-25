@@ -165,11 +165,11 @@ outgoing:
   pools:
     default:
       http:
-        - address: 'socks5h://tor:9050'
-        - address: 'socks5h://tor:9050'
+        - address: 'socks5h://tor:905'
+        - address: 'socks5h://tor:905'
       https:
-        - address: 'socks5h://tor:9050'
-        - address: 'socks5h://tor:9050'
+        - address: 'socks5h://tor:905'
+        - address: 'socks5h://tor:905'
 
   enable_http2: true
   # uncomment below section if you want to use a custom server certificate
