@@ -1,3 +1,4 @@
+{% from 'simple/icons.html' import icon_big %}
 <!DOCTYPE html>
 <html
     class="no-js theme-{{ preferences.get_value('simple_style') or 'auto' }} center-aligment-{{ preferences.get_value('center_alignment') and 'yes' or 'no' }}"
@@ -54,8 +55,12 @@
 
 
     <nav id="links_on_top">
+
         {%- from 'simple/icons.html' import icon_big -%}
+        <a href="https://chat.splendos.org/"
+               >{{ icon_big('globe-outline') }}AI Chat<span></span></a>
         {%- block linkto_about -%}
+
        <!-- <a href="{{ url_for('preferences') }}"
                class="link_on_top_preferences">{{ icon_big('menu-outline') }}<span>Settings{{ _('Preferences') }}</span></a>
                class="link_on_top_about">{{ icon_big('information-circle-outline') }}<span>{{ _('About') }}</span></a>-->
