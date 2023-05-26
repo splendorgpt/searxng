@@ -63,6 +63,7 @@ search:
   # formats: [html, csv, json, rss]
   formats:
     - html
+    - json
 
 server:
   # If you change port, bind_address or base_url don't forget to rebuild
@@ -162,15 +163,17 @@ outgoing:
   # point.
   pool_maxsize: 20
   # See https://www.python-httpx.org/http2/
-  pools:
-    default:
-      http:
-        - address: 'socks5h://localhost:9050'
-        - address: 'socks5h://localhost:9050'
-      https:
-        - address: 'socks5h://localhost:9050'
-        - address: 'socks5h://localhost:9050'
-
+  #pools:
+  #  default:
+  #    http:
+  #      - address: 'socks5h://localhost:9050'
+  #      - address: 'socks5h://localhost:9050'
+  #    https:
+  #      - address: 'socks5h://localhost:9050'
+  #      - address: 'socks5h://localhost:9050'
+  #proxies:
+  #  http: socks5h://localhost:9050
+  #  https: socks5h://localhost:9050
   enable_http2: true
   # uncomment below section if you want to use a custom server certificate
   # see https://www.python-httpx.org/advanced/#changing-the-verification-defaults
