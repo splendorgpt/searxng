@@ -11,15 +11,7 @@
 }  -%}
 <div id="categories" class="search_categories">{{- '' -}}
     <div id="categories_container">
-          <div class="category">
-    <input type="checkbox" name="" />
-    <label for="" class="tooltips">
-        {{- icon_big(category_icons[category]) if category in category_icons  else icon_big('globe-outline') -}}
-            <div class="category_name"><a href="https://chat.splendos.org">AI Chat</a></div>
-
-    </label>
-</div>
-        {%- for category in categories -%}
+        {%- for category in categories[:1] -%}
         <div class="category"><input type="checkbox" id="checkbox_{{ category|replace(' ', '_') }}" name="category_{{ category }}"{% if category in selected_categories %} checked="checked"{% endif %}/>
             <label for="checkbox_{{ category|replace(' ', '_') }}" class="tooltips">
                 {{- icon_big(category_icons[category]) if category in category_icons  else icon_big('globe-outline') -}}
@@ -27,7 +19,31 @@
             </label>
         </div>
         {%- endfor -%}
+        <a href="https://chat.splendos.org" style="color: #bbb; text-decoration: none;">
+    <div class="category">
+        <input type="checkbox" id="" name=""/>
+        <label for="" class="tooltips">
+            {{- icon_big(category_icons[category]) if category in category_icons  else icon_big('globe-outline') -}}
+            <div class="category_name">AI Chat</div>
+        </label>
+        </div>
+    </a>
+         {%- for category in categories[-6:] -%}
+        <div class="category"><input type="checkbox" id="checkbox_{{ category|replace(' ', '_') }}" name="category_{{ category }}"{% if category in selected_categories %} checked="checked"{% endif %}/>
+            <label for="checkbox_{{ category|replace(' ', '_') }}" class="tooltips">
+                {{- icon_big(category_icons[category]) if category in category_icons  else icon_big('globe-outline') -}}
+                <div class="category_name">{{- _(category) -}}</div>
+            </label>
+        </div>
+        {%- endfor -%}
+   <!--     <div class="category">
+    <input type="checkbox" name="" />
+    <label for="" class="tooltips">
+        {{- icon_big(category_icons[category]) if category in category_icons  else icon_big('globe-outline') -}}
+            <div class="category_name"><a href="https://chat.splendos.org">AI Chat</a></div>
 
+    </label>
+</div>-->
 
 
 
