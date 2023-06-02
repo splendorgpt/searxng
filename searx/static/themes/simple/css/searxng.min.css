@@ -2478,7 +2478,7 @@ table.engine-error th.engine-error-type {
     margin: 4rem; /* Margen izquierdo y derecho */
     background-position: center;
     background-size: contain;
-     transform: scale(0.9);
+     transform: scale(0.99);
   }
 }
 .index h1 {
