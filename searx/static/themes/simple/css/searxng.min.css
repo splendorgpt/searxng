@@ -2475,9 +2475,10 @@ table.engine-error th.engine-error-type {
   .index .title {
     background: url(../img/searxng.svg) no-repeat;
     min-height: 4rem;
-    margin: 4rem 10px; /* Margen izquierdo y derecho */
+    margin: 4rem; /* Margen izquierdo y derecho */
     background-position: center;
     background-size: contain;
+     transform: scale(0.9);
   }
 }
 .index h1 {
