@@ -9,7 +9,7 @@ from searx.version import VERSION_STRING, GIT_URL, GIT_BRANCH
 
 # Project --------------------------------------------------------------
 
-project = 'Splendos'
+project = 'Splendor'
 copyright = '2021 SearXNG team, 2015-2021 Adam Tauber, Noémi Ványi'
 author = '2021 SearXNG team, 2015-2021 Adam Tauber'
 release, version = VERSION_STRING, VERSION_STRING

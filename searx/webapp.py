@@ -610,7 +610,7 @@ def index_error(output_format: str, error_message: str):
             error_message=error_message,
         )
         response_rss.headers[
-            'Content-Security-Policy'] = "default-src 'self'; connect-src 'self' https://overpass-api.de https://ai-connector.splendos.org"
+            'Content-Security-Policy'] = "default-src 'self'; connect-src 'self' https://overpass-api.de https://ai-connector.splendor.org"
         return Response(response_rss, mimetype='text/xml')
 
     # html
@@ -759,7 +759,7 @@ def search():
         }
         response = json.dumps(x, default=lambda item: list(item) if isinstance(item, set) else item)
         response.headers[
-            'Content-Security-Policy'] = "default-src 'self'; connect-src 'self' https://overpass-api.de https://ai-connector.splendos.org"
+            'Content-Security-Policy'] = "default-src 'self'; connect-src 'self' https://overpass-api.de https://ai-connector.splendor.org"
         return Response(response, mimetype='application/json')
 
     if output_format == 'csv':
@@ -783,7 +783,7 @@ def search():
         response = Response(csv.stream.read(), mimetype='application/csv')
         cont_disp = 'attachment;Filename=searx_-_{0}.csv'.format(search_query.query)
         response.headers.add('Content-Disposition', cont_disp)
-        response.headers['Content-Security-Policy'] = "default-src 'self'; connect-src 'self' https://overpass-api.de https://ai-connector.splendos.org"
+        response.headers['Content-Security-Policy'] = "default-src 'self'; connect-src 'self' https://overpass-api.de https://ai-connector.splendor.org"
         return response
 
     if output_format == 'rss':
@@ -797,7 +797,7 @@ def search():
             number_of_results=number_of_results,
         )
         response_rss.headers[
-            'Content-Security-Policy'] = "default-src 'self'; connect-src 'self' https://overpass-api.de https://ai-connector.splendos.org"
+            'Content-Security-Policy'] = "default-src 'self'; connect-src 'self' https://overpass-api.de https://ai-connector.splendor.org"
         return Response(response_rss, mimetype='text/xml')
 
     # HTML output format
