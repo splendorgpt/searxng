@@ -1,8 +1,8 @@
 general:
   # Debug mode, only for development. Is overwritten by ${SEARXNG_DEBUG}
-  debug: true
+  debug: false
   # displayed name
-  instance_name: "SearXNG"
+  instance_name: "Splendor"
   # For example: https://example.com/privacy
   privacypolicy_url: false
   # use true to use your own donation page written in searx/info/en/donate.md
@@ -379,7 +379,7 @@ engines:
   - name: bing
     engine: bing
     shortcut: bi
-    disabled: true
+    disabled: false
 
   - name: bing images
     engine: bing_images
@@ -572,6 +572,7 @@ engines:
   - name: duckduckgo
     engine: duckduckgo
     shortcut: ddg
+    disabled: true
 
   - name: duckduckgo images
     engine: duckduckgo_images
@@ -736,6 +737,7 @@ engines:
   - name: google
     engine: google
     shortcut: go
+    disabled: true
     # additional_tests:
     #   android: *test_android
 
@@ -1447,7 +1449,7 @@ engines:
   - name: yahoo
     engine: yahoo
     shortcut: yh
-    disabled: true
+    disabled: false
 
   - name: yahoo news
     engine: yahoo_news
